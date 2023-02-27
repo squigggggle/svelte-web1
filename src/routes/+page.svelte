@@ -22,6 +22,7 @@
         count3 += 0.1;
         pad.style.padding = (count2)+"vw";
         pad.style.fontSize = (count3)+"em";
+        audio.playbackRate = 3;
         audio.play();
     }
 </script>
