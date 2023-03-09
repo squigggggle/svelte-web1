@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div class="wrapper">
+    <div>sidebar1</div>
+    <div>Two</div>
+    <div class="box3">
+      <p>Three</p>
+      <div class="nest">I have</div>
+      <div class="nest">three</div>
+      <div class="nest">boxes</div>
+    </div>
+    <div>Four</div>
+    <div>sidebar2</div>
+  </div>
