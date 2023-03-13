@@ -7,6 +7,8 @@ html, body {
     padding: 0;
 }
 
+/* grid layout */
+
 .wrapper {
     display: grid;
     grid-template-columns: 1fr repeat(3, 3fr) 1fr;
@@ -14,22 +16,22 @@ html, body {
 }
   
 .box3 {
-    display:grid;
-    position:relative;
+    display: grid;
+    position: relative;
     grid-template-columns: repeat(3, 1fr);
     padding: 1em;
     align-items:center;
 }
   
 .box3 p {
-    position:absolute;
+    position: absolute;
     top: 0px;
     left: 0px;
     margin: 0;
 }
   
-.nest{
-    display:flex;
+.nest {
+    display: flex;
     justify-content: center;
     height: 100px;
 }
