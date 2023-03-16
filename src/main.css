@@ -1,41 +1,5 @@
-html {
-    height: 100%;
-}
-
-html, body {
+body {
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-}
-
-/* grid layout */
-
-.wrapper {
-    display: grid;
-    grid-template-columns: 1fr repeat(3, 3fr) 1fr;
-    grid-auto-rows: 200px;
-}
-  
-.box3 {
-    display: grid;
-    position: relative;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 1em;
-    align-items:center;
-}
-  
-.box3 p {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    margin: 0;
-}
-  
-.nest {
-    display: flex;
-    justify-content: center;
-    height: 100px;
-}
-  
-.wrapper > div, .nest {
-    border-style: solid;
 }
