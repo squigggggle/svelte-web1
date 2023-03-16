@@ -4,7 +4,22 @@
 </script>
 
 <!-- imported navigation component from the lib folder -->
-<Navigation />
+<div>
+    <Navigation />
 
-<!-- webpage contents -->
-<slot />
+    <main>
+        <slot />
+    </main>
+
+    <footer>
+
+    </footer>
+</div>
+
+<style>
+    div{
+        display:flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+</style>

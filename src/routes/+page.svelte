@@ -26,7 +26,7 @@
     height: 100px;
 }
   
-.wrapper > div, .nest {
+/* .wrapper > div, .nest {
     border-style: solid;
-}
+} */
 </style>
