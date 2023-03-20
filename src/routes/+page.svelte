@@ -15,7 +15,7 @@
   
 .grid {
     display: grid;
-    position: relative;
+    /* position: relative; */
     grid-template-columns: repeat(3, 1fr);
     grid-column: 2/3;
 }

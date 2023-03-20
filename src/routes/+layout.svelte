@@ -12,14 +12,18 @@
     </main>
 
     <footer>
-
+        <p>insert text here</p>
     </footer>
 </div>
 
 <style>
-    div{
+    div {
         display:flex;
         flex-direction: column;
         min-height: 100vh;
+    }
+
+    main {
+        flex: 1;
     }
 </style>
