@@ -1,7 +1,3 @@
-<script>
-  import loaf from "$lib/loaf.jpg";
-</script>
-
 <div class="grid">
   <div class="content">
     <h1>Testing</h1>
@@ -25,7 +21,7 @@
         sed. Donec mi leo, suscipit ut aliquam pulvinar, viverra non nisi. Duis
         et enim velit.
       </p>
-      <img alt="Ninja in Loaf form" src={loaf} />
+      <img alt="Ninja in Loaf form" src="src/lib/loaf.jpg"/>
       <p>
         In ac felis et purus tempor luctus sed eget massa. Proin orci magna,
         efficitur nec ante sit amet, vestibulum egestas ante. Proin et vehicula
