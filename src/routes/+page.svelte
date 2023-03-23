@@ -5,7 +5,6 @@
 <div class="grid">
   <div class="content">
     <h1>Testing</h1>
-    <section>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean arcu
         eros, dapibus accumsan massa at, gravida feugiat nisi. Duis eu aliquet
@@ -66,7 +65,6 @@
         in faucibus nunc dolor id diam. Quisque in quam quis elit pellentesque
         aliquam. Morbi lacinia urna risus, ac malesuada mauris pulvinar vel.
       </p>
-    </section>
   </div>
 </div>
 

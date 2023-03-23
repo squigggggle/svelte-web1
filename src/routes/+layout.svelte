@@ -1,29 +1,29 @@
 <script>
-    import '../main.css';
-    import Navigation from '$lib/navigation.svelte';
+  import "../main.css";
+  import Navigation from "$lib/navigation.svelte";
 </script>
 
 <!-- imported navigation component from the lib folder -->
 <div>
-    <Navigation />
+  <Navigation />
 
-    <main>
-        <slot />
-    </main>
+  <main>
+    <slot />
+  </main>
 
-    <footer>
-        <p>insert text here</p>
-    </footer>
+  <footer>
+    <p>insert text here</p>
+  </footer>
 </div>
 
 <style>
-    div {
-        display:flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
+  div {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-    main {
-        flex: 1;
-    }
+  main {
+    flex: 1;
+  }
 </style>
