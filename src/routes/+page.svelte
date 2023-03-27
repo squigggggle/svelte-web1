@@ -77,9 +77,10 @@
 
   img {
     margin: 1em auto;
+    max-width: 100%;
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 768px) {
     .grid {
       grid-template-columns: 1fr 3fr 1fr;
     }
