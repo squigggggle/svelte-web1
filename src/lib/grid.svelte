@@ -17,8 +17,6 @@
     padding: 0 1em;
   }
 
-  
-
   @media (min-width: 768px) {
     .grid {
       grid-template-columns: 1fr 3fr 1fr;
