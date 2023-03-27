@@ -1,6 +1,7 @@
 <script>
   import "../main.css";
   import Navigation from "$lib/navigation.svelte";
+  import Grid from "$lib/grid.svelte";
 </script>
 
 <!-- imported navigation component from the lib folder -->
@@ -8,7 +9,9 @@
   <Navigation />
 
   <main>
-    <slot />
+    <Grid>
+      <slot />
+    </Grid>
   </main>
 
   <footer>
