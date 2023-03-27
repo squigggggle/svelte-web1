@@ -66,7 +66,7 @@
 <style>
   .grid {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 5fr;
   }
 
   .content {
@@ -79,5 +79,9 @@
     margin: 1em auto;
   }
 
-  /* maybe add an @media, when screen is x width; remove the extra grid bits */
+  @media (min-width: 700px) {
+    .grid {
+      grid-template-columns: 1fr 3fr 1fr;
+    }
+  }
 </style>
