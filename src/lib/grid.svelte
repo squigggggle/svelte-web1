@@ -13,6 +13,7 @@
   .content {
     display: flex;
     flex-direction: column;
+    gap: 2em;
     grid-column: 2/3;
     padding: 0 1em;
   }

@@ -59,4 +59,7 @@
     margin: 1em auto;
     max-width: 100%;
   }
+  h1, p {
+    margin: 0;
+  }
 </style>
