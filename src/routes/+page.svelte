@@ -62,4 +62,7 @@
   h1, p {
     margin: 0;
   }
+  p{
+    font-size: 1rem;
+  }
 </style>

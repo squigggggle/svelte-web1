@@ -1,7 +1,7 @@
 <script>
   import "../main.css";
   import Navigation from "$lib/navigation.svelte";
-  import Grid from "$lib/grid.svelte";
+  import Sidebar from "$lib/sidebar.svelte";
 </script>
 
 <!-- imported navigation component from the lib folder -->
@@ -9,9 +9,9 @@
   <Navigation />
 
   <main>
-    <Grid>
+    <Sidebar>
       <slot />
-    </Grid>
+    </Sidebar>
   </main>
 
   <footer>
@@ -27,6 +27,8 @@
   }
 
   main {
-    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* flex: 1; */
   }
 </style>
