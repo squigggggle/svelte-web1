@@ -1,13 +1,19 @@
-<h1>Testing</h1>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean arcu eros,
-  dapibus accumsan massa at, gravida feugiat nisi. Duis eu aliquet lacus.
-  Vestibulum nec quam faucibus urna tincidunt efficitur. Sed quis est non est
-  ultricies eleifend ut sit amet dui. Cras ultrices risus ut arcu ornare, vel
-  iaculis velit lacinia. Aliquam est turpis, imperdiet quis ante quis, consequat
-  faucibus mi. Proin fermentum nisi fermentum nunc feugiat, ac porta eros
-  vehicula. Suspendisse vitae egestas leo, ullamcorper bibendum diam.
-</p>
+<section>
+  <div class="box1">
+    <div>
+      <h1>Testing</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean arcu
+        eros, dapibus accumsan massa at, gravida feugiat nisi.
+      </p>
+    </div>
+  </div>
+  <div>
+    <span>
+      <img alt="Ninja in Loaf form" src="src/lib/loaf.jpg" />
+    </span>
+  </div>
+</section>
 <p>
   Maecenas egestas leo in dapibus molestie. Quisque ac ullamcorper ex, ut
   elementum mi. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur
@@ -17,7 +23,7 @@
   urna nunc, sed ultricies tellus commodo sed. Donec mi leo, suscipit ut aliquam
   pulvinar, viverra non nisi. Duis et enim velit.
 </p>
-<img alt="Ninja in Loaf form" src="src/lib/loaf.jpg" />
+
 <p>
   In ac felis et purus tempor luctus sed eget massa. Proin orci magna, efficitur
   nec ante sit amet, vestibulum egestas ante. Proin et vehicula lacus. Fusce
@@ -55,14 +61,49 @@
 </p>
 
 <style>
-  img {
-    margin: 1em auto;
-    max-width: 100%;
-  }
   h1, p {
     margin: 0;
+    font-size: 6rem;
   }
-  p{
+  div.box1 p {
+    font-size: 2rem;
+  }
+  p {
     font-size: 1rem;
+  }
+
+  span {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+  section div.box1 {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 0px;
+    padding: 6rem;
+  }
+  section div.box1 div {
+    max-width: 300px;
+  }
+  section div {
+    flex: 1 1 200px;
+  }
+  img {
+    object-fit: cover;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      flex-direction: column-reverse;
+    }
   }
 </style>

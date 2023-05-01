@@ -5,30 +5,20 @@
 </script>
 
 <!-- imported navigation component from the lib folder -->
-<div>
-  <Navigation />
 
-  <main>
-    <Sidebar>
-      <slot />
-    </Sidebar>
-  </main>
+<Navigation />
 
-  <footer>
-    <p>insert text here</p>
-  </footer>
-</div>
+<main>
+  <slot />
+</main>
+
+<footer>
+  <p>insert text here</p>
+</footer>
 
 <style>
-  div {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
   main {
-    display: flex;
-    justify-content: center;
-    /* flex: 1; */
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 </style>
