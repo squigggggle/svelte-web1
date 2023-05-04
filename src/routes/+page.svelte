@@ -8,13 +8,11 @@
       </p>
     </div>
   </div>
-  <div>
-    <span>
+  <div class="img">
       <img alt="Ninja in Loaf form" src="src/lib/loaf.jpg" />
-    </span>
   </div>
 </section>
-<p>
+<!-- <p>
   Maecenas egestas leo in dapibus molestie. Quisque ac ullamcorper ex, ut
   elementum mi. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur
   adipiscing elit. Aenean ac gravida mauris. Praesent gravida, dolor sit amet
@@ -58,10 +56,13 @@
   ex dui. Mauris tincidunt, arcu ultrices venenatis feugiat, metus ligula varius
   massa, in faucibus nunc dolor id diam. Quisque in quam quis elit pellentesque
   aliquam. Morbi lacinia urna risus, ac malesuada mauris pulvinar vel.
-</p>
+</p> -->
 
 <style>
-  h1, p {
+  * {
+    box-sizing: border-box;
+  }
+  h1 {
     margin: 0;
     font-size: 6rem;
   }
@@ -72,12 +73,6 @@
     font-size: 1rem;
   }
 
-  span {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
   section {
     display: flex;
     flex-direction: row;
@@ -85,25 +80,41 @@
   section div.box1 {
     display: flex;
     justify-content: center;
-    flex: 1 1 0px;
-    padding: 6rem;
-  }
-  section div.box1 div {
-    max-width: 300px;
-  }
-  section div {
     flex: 1 1 200px;
+    /* padding: 6rem; */
+    flex-direction: column;
+    align-items: center;
+  }
+  section div.box1 div{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    width: 100%;
+  }
+
+  div.img {
+    flex: 1 1 200px;
+    display: flex;
   }
   img {
+    position: relative;
+    box-sizing: border-box;
+    margin: auto;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
     object-fit: cover;
-    position: absolute;
-    width: inherit;
-    height: inherit;
   }
 
   @media (max-width: 768px) {
     section {
       flex-direction: column-reverse;
+    }
+    div.box1 {
+      padding: 4.5rem;
+      font-size: 4.8rem;
     }
   }
 </style>
