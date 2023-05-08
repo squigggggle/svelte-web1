@@ -1,0 +1,61 @@
+<section>
+  <div class="panel">
+    <div class="text">
+      <h1>This cat is so loaf right now</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean arcu
+        eros, dapibus accumsan massa at, gravida feugiat nisi.
+      </p>
+    </div>
+  </div>
+  <div class="img">
+    <img alt="Ninja in Loaf form" src="src/lib/loaf-square.jpg" />
+  </div>
+</section>
+
+<style>
+  /* panels go across the page in a wide viewport */
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+  /* sets one panel to be half the width of the container
+  box sizing ensures padding is included in width calculation */
+  .panel {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 50%;
+    padding: 6rem;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .text {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    width: 100%;
+    font-size: 2rem;
+  }
+  .img {
+    flex: 1 1 50%;
+    display: flex;
+  }
+  img {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  @media (max-width: 768px) {
+    /* panels go down the page (in reverse for image above text) */
+    section {
+      flex-direction: column-reverse;
+    }
+    /* adjusted sizing for mobile-sized viewport */
+    .panel {
+      padding: 4.5rem;
+    }
+  }
+</style>
