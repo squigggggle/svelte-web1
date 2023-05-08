@@ -20,5 +20,6 @@
   main {
     margin: 0 auto;
     box-sizing: border-box;
+    font-size: 62.5%;
   }
 </style>
