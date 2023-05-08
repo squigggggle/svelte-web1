@@ -1,7 +1,6 @@
 <script>
   import "../main.css";
   import Navigation from "$lib/navigation.svelte";
-  import Sidebar from "$lib/sidebar.svelte";
 </script>
 
 <!-- imported navigation component from the lib folder -->
@@ -17,8 +16,4 @@
 </footer>
 
 <style>
-  main {
-    margin: 0 auto;
-    font-size: 62.5%;
-  }
 </style>
