@@ -22,6 +22,5 @@
   }
   a:hover {
     color: rgb(91, 222, 126);
-    /* transition: all 0.5s; */
   }
 </style>
