@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="img">
-    <img alt="Ninja in Loaf form" src="src/lib/loaf-square.jpg" />
+    <img alt="Ninja in Loaf form" src="loaf-square.jpg" />
   </div>
 </section>
 
