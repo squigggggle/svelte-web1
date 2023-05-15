@@ -37,6 +37,10 @@
     width: 100%;
     font-size: 2rem;
   }
+  h1, p {
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  
   .img {
     flex: 1 1 50%;
     display: flex;

@@ -14,6 +14,8 @@
     justify-content: space-evenly;
   }
   a {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2rem;
     color: black;
     text-decoration: none;
     transition: all 0.5s;
