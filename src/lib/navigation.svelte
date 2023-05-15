@@ -7,15 +7,22 @@
 </nav>
 
 <style>
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
+  }
   ul {
     display: flex;
     list-style: none;
-    padding: 0;
+    margin: 0;
+    padding: 2rem 0;
     justify-content: space-evenly;
   }
   a {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 2rem;
+    font-weight: 500;
     color: black;
     text-decoration: none;
     transition: all 0.5s;
