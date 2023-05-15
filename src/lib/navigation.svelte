@@ -1,18 +1,25 @@
 <nav>
   <ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/">2</a></li>
+    <li><a href="/">3</a></li>
   </ul>
 </nav>
 
 <style>
   ul {
     display: flex;
-    flex-direction: row;
     list-style: none;
     padding: 0;
-    width: 100%;
     justify-content: space-evenly;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.5s;
+  }
+  a:hover {
+    color: rgb(91, 222, 126);
+    /* transition: all 0.5s; */
   }
 </style>
