@@ -1,21 +1,11 @@
-<script>
-  export let headerString;
-  export let paraString;
-  export let panelImage;
-</script>
-
 <section>
   <div class="panel">
     <div class="text">
-      <h1>{headerString}</h1>
-      <p>
-        {paraString}
-      </p>
+      <h1><slot name="header"></slot></h1>
+      <p><slot name="paragraph"></slot></p>
     </div>
   </div>
-  <div class="img">
-    <img src="{panelImage}" />
-  </div>
+  <div class="img"><slot name="image"></slot></div>
 </section>
 
 <style>
@@ -45,12 +35,13 @@
   h1, p {
     font-family: 'IBM Plex Sans', sans-serif;
   }
-  
   .img {
     flex: 1 1 50%;
     display: flex;
+    
   }
-  img {
+  /* any img elements that are children of .img will get this style (e.g. imported from slot) */
+  .img :global(img) {
     min-width: 100%;
     max-width: 100%;
     min-height: 100%;
