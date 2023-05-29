@@ -1,15 +1,20 @@
+<script>
+  export let headerString;
+  export let paraString;
+  export let panelImage;
+</script>
+
 <section>
   <div class="panel">
     <div class="text">
-      <h1>This cat is so loaf right now</h1>
+      <h1>{headerString}</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean arcu
-        eros, dapibus accumsan massa at, gravida feugiat nisi.
+        {paraString}
       </p>
     </div>
   </div>
   <div class="img">
-    <img alt="Ninja in Loaf form" src="loaf-square.jpg" />
+    <img src="{panelImage}" />
   </div>
 </section>
 
