@@ -1,8 +1,8 @@
 <script>
   import Panels from "$lib/panels.svelte";
 </script>
-
-<Panels>
+<!-- css variable to change direction of panel flow -->
+<Panels --direction="row">
   <h1 slot="header">
     This cat is so loaf right now
   </h1>
@@ -11,7 +11,7 @@
   </p>
   <img slot="image" src="loaf-square.jpg" alt="loaf"/>
 </Panels>
-<Panels>
+<Panels --direction="row-reverse">
   <h1 slot="header">
     test
   </h1>

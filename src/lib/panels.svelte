@@ -12,7 +12,7 @@
   /* panels go across the page in a wide viewport */
   section {
     display: flex;
-    flex-direction: row;
+    flex-direction: var(--direction);
   }
   /* sets one panel to be half the width of the container
   box sizing ensures padding is included in width calculation */
