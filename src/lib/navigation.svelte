@@ -6,10 +6,13 @@
   // change text colour based on opacity for readability
   // $: colour = backgroundOpacity < 0.6 ? '#000' : '#fff';
 
+
+  // https://stackoverflow.com/questions/74776399/how-to-hide-a-div-element-when-scrolling-up-from-any-part-of-the-page-the-svelte
   let y;
 	let newY = [];
+  //constantly updates current Y position when newY changes
   $: oldY = newY[1];
-    
+  //pushes new Y position into array 
   function updateY(){
     newY.push(y);
     if(newY.length > 5) {
@@ -24,8 +27,8 @@
 <!-- https://stackoverflow.com/questions/67943713/svelte-hide-and-show-nav-on-scroll -->
 
 <svelte:window on:scroll={updateY} bind:scrollY={y}/>
-
-{#if oldY > y || y < 100}
+<div style="margin-top: 67px;"></div>
+{#if oldY > y || y < 67}
   <nav transition:fly>
     <ul>
       <li><a href="/">Home</a></li>
