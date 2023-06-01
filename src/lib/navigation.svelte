@@ -31,7 +31,6 @@
   nav {
     position: fixed;
     top: 0;
-    /* background: rgba(255, 255, 255, var(--opacity)); */
     background: white;
     width: 100%;
   }
