@@ -2,21 +2,21 @@
   import { fly } from 'svelte/transition';
 
   // https://svelte.dev/tutorial/inline-styles
-  let backgroundOpacity = 0;
+  // let backgroundOpacity = 0;
   // change text colour based on opacity for readability
-  $: colour = backgroundOpacity < 0.6 ? '#000' : '#fff';
+  // $: colour = backgroundOpacity < 0.6 ? '#000' : '#fff';
 
   let y;
 	let newY = [];
-    $: oldY = newY[1];
+  $: oldY = newY[1];
     
-    function updateY(){
-        newY.push(y);
-        if(newY.length > 20) {
-            newY.shift();
-        }
-        newY=newY;
+  function updateY(){
+    newY.push(y);
+    if(newY.length > 5) {
+        newY.shift();
     }
+    newY=newY;
+  }
 </script>
 
 <!-- try to figure out nav hide on scroll and opacity change -->
@@ -26,7 +26,7 @@
 <svelte:window on:scroll={updateY} bind:scrollY={y}/>
 
 {#if oldY > y || y < 100}
-  <nav style="color: {colour}; --opacity: {backgroundOpacity};">
+  <nav transition:fly>
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="/">2</a></li>
@@ -36,9 +36,11 @@
 {/if}
 <style>
   nav {
-    position: sticky;
+    position: fixed;
     top: 0;
-    background: rgba(255, 255, 255, var(--opacity));
+    /* background: rgba(255, 255, 255, var(--opacity)); */
+    background: white;
+    width: 100%;
   }
   ul {
     display: flex;
