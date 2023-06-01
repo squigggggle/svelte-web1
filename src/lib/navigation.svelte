@@ -1,33 +1,23 @@
 <script>
   import { fly } from 'svelte/transition';
 
-  // https://svelte.dev/tutorial/inline-styles
-  // let backgroundOpacity = 0;
-  // change text colour based on opacity for readability
-  // $: colour = backgroundOpacity < 0.6 ? '#000' : '#fff';
-
-
   // https://stackoverflow.com/questions/74776399/how-to-hide-a-div-element-when-scrolling-up-from-any-part-of-the-page-the-svelte
   let y;
 	let newY = [];
-  //constantly updates current Y position when newY changes
-  $: oldY = newY[1];
-  //pushes new Y position into array 
+  
+  $: oldY = newY[1];        //constantly updates current Y position when newY changes
+
   function updateY(){
-    newY.push(y);
-    if(newY.length > 5) {
+    newY.push(y);           //pushes new Y position into array
+    if(newY.length > 5) {   //used to change scroll up distance until nav will show again
         newY.shift();
     }
-    newY=newY;
+    newY=newY;              //assign to itself so svelte notices change
   }
 </script>
 
-<!-- try to figure out nav hide on scroll and opacity change -->
-<!-- https://svelte.dev/repl/051cd352ce284d15b55c91c8b30fa32f?version=3.16.7 -->
-<!-- https://stackoverflow.com/questions/67943713/svelte-hide-and-show-nav-on-scroll -->
-
 <svelte:window on:scroll={updateY} bind:scrollY={y}/>
-<div style="margin-top: 67px;"></div>
+<div style="margin-top: 67px;" />
 {#if oldY > y || y < 67}
   <nav transition:fly>
     <ul>
