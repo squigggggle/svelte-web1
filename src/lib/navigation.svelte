@@ -22,7 +22,7 @@
   <nav transition:fly>
     <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="/">2</a></li>
+      <li><a href="/random">2</a></li>
       <li><a href="/">3</a></li>
     </ul>
   </nav>
