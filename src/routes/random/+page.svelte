@@ -1,20 +1,20 @@
 <script>
     import { invalidate, invalidateAll } from '$app/navigation';
 
-
-    const BASE_URL = "https://cataas.com/cat";
     export let data;
-    let cat = data.cat;
-    console.log(cat._id);
-    let catID = cat._id;
-
-
+    $: cat = data.cat;          //updates automatically when needed (when the update button is pressed)
+    $: catID = cat._id;
     //this thing works but the variable doesn't update
     function rerunLoadFunction(){
-        invalidateAll();
+        invalidateAll();  
     }
 </script>
 
-<img src="{BASE_URL}/{catID}" alt= "Random cat">
+{#if data.status = 200}
+    <img src="{data.BASE_URL}/cat/{catID}" alt= "Random cat">
+{:else}
+    <img src="loaf-square.jpg" alt="Default cat">
+{/if}
+
 <!-- <a href="/random" data-sveltekit-reload>test button</a> -->
 <button on:click={rerunLoadFunction}>Update</button>
