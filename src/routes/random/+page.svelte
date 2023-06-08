@@ -1,20 +1,18 @@
 <script>
-    import { invalidate, invalidateAll } from '$app/navigation';
+    import { invalidateAll } from '$app/navigation';
 
     export let data;
-    $: cat = data.cat;          //updates automatically when needed (when the update button is pressed)
-    $: catID = cat._id;
-    //this thing works but the variable doesn't update
+
     function rerunLoadFunction(){
-        invalidateAll();  
+        invalidateAll();                //calls load functions related to this page again
     }
 </script>
 
-{#if data.status = 200}
-    <img src="{data.BASE_URL}/cat/{catID}" alt= "Random cat">
-{:else}
+{#if data.status = 200}                 <!--if fetch is successful (code 200) show the image-->
+    <img src="{data.BASE_URL}/{data.cat}" alt= "Random cat">
+{:else}                                 <!--otherwise show default image-->
     <img src="loaf-square.jpg" alt="Default cat">
+    <p>Error: {data.status}</p>
 {/if}
 
-<!-- <a href="/random" data-sveltekit-reload>test button</a> -->
 <button on:click={rerunLoadFunction}>Update</button>
