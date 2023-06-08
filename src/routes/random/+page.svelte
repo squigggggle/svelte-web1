@@ -18,6 +18,9 @@
     <button on:click={rerunLoadFunction}>Update</button>
 </div>
 
+
+<!-- try this https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space -->
+<!-- want to make the div where the image goes fill up all empty space -->
 <style>
     div {
         display:flex;
@@ -31,5 +34,8 @@
     button {
         margin: 1rem 0 0;
         padding: 1rem;
+        background-color: greenyellow;
+        border: none;
+        border-radius: 1rem;
     }
 </style>
