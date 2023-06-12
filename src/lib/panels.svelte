@@ -1,7 +1,7 @@
 <section>
   <div class="panel">
     <div class="text">
-      <h1><slot name="header"></slot></h1>
+      <h2><slot name="header"></slot></h2>
       <p><slot name="paragraph"></slot></p>
     </div>
   </div>
@@ -32,7 +32,7 @@
     width: 100%;
     font-size: 2rem;
   }
-  h1, p {
+  h2, p {
     font-family: 'IBM Plex Sans', sans-serif;
   }
   .img {
