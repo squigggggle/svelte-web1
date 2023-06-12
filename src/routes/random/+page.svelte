@@ -27,6 +27,7 @@
     }
     img {
         width: max-content;
+        flex: 1 1 auto;
     }
 
     button {
