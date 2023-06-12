@@ -26,7 +26,7 @@
         flex: 1 1 auto;
     }
     img {
-        width: max-content;
+        width: 100%;
         flex: 1 1 auto;
     }
 

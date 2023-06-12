@@ -22,7 +22,6 @@
     flex: 1 1 50%;
     padding: 6rem;
     align-items: center;
-    box-sizing: border-box;
   }
   .text {
     max-width: 600px;

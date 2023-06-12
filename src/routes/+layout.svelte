@@ -19,7 +19,6 @@
     padding-top: 67px; 
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
     min-height: inherit;
   }
 </style>
