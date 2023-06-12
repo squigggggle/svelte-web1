@@ -4,18 +4,22 @@
   import Footer from "$lib/footer.svelte";
 </script>
 
-<!-- imported navigation component from the lib folder -->
-
 <Navigation />
 
 <main>
   <slot />
+  <Footer />
 </main>
 
-<Footer />
+
 
 <style>
   main {
-    margin-top: 67px;
+    /* fill in space behind nav bar */
+    padding-top: 67px; 
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: inherit;
   }
 </style>

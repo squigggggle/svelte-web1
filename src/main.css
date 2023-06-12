@@ -6,7 +6,7 @@ html {
 
 }
 body {
-    min-height: 100%;
+    min-height: inherit;
     margin: 0;
     padding: 0;
 }
