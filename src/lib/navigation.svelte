@@ -17,13 +17,11 @@
 </script>
 
 <svelte:window on:scroll={updateY} bind:scrollY={y}/>
-<div style="margin-top: 67px;" />
 {#if oldY > y || y < 67}
   <nav transition:fly>
     <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="/random">2</a></li>
-      <li><a href="/">3</a></li>
+      <li><a href="/random">Random</a></li>
     </ul>
   </nav>
 {/if}
