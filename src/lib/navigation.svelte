@@ -25,6 +25,7 @@
     </ul>
   </nav>
 {/if}
+
 <style>
   nav {
     position: fixed;
@@ -38,16 +39,5 @@
     margin: 0;
     padding: 2rem 0;
     justify-content: space-evenly;
-  }
-  a {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
-    color: black;
-    text-decoration: none;
-    transition: all 0.5s;
-  }
-  a:hover {
-    color: rgb(91, 222, 126);
   }
 </style>
