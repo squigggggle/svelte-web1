@@ -35,8 +35,13 @@
     button {
         margin: 1rem 0 0;
         padding: 1rem;
-        background-color: greenyellow;
+        background-color: #adff2f;
         border: none;
         border-radius: 1rem;
+        transition: 0.5s;
+    }
+
+    button:hover {
+        background-color: #98e02c;
     }
 </style>
