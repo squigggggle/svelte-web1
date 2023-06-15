@@ -1,22 +1,23 @@
 <script>
-  import { fly } from 'svelte/transition';
+  import { fly } from "svelte/transition";
 
   // https://stackoverflow.com/questions/74776399/how-to-hide-a-div-element-when-scrolling-up-from-any-part-of-the-page-the-svelte
   let y;
-	let newY = [];
-  
-  $: oldY = newY[1];        //constantly updates current Y position when newY changes
+  let newY = [];
 
-  function updateY(){
-    newY.push(y);           //pushes new Y position into array
-    if(newY.length > 5) {   //used to change scroll up distance until nav will show again
-        newY.shift();
+  $: oldY = newY[1]; //constantly updates current Y position when newY changes
+
+  function updateY() {
+    newY.push(y); //pushes new Y position into array
+    if (newY.length > 5) {
+      //used to change scroll up distance until nav will show again
+      newY.shift();
     }
-    newY=newY;              //assign to itself so svelte notices change
+    newY = newY; //assign to itself so svelte notices change
   }
 </script>
 
-<svelte:window on:scroll={updateY} bind:scrollY={y}/>
+<svelte:window on:scroll={updateY} bind:scrollY={y} />
 {#if oldY > y || y < 67}
   <nav transition:fly>
     <ul>
