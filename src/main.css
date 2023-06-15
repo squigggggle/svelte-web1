@@ -15,14 +15,21 @@ body {
     padding: 0;
 }
 
+h1,
 h2 {
     margin: 0;
     font-size: 6rem;
 }
 
+h1,
+h2,
 p,
 a {
     font-family: "IBM Plex Sans", sans-serif;
+}
+
+p,
+a {
     font-size: 2rem;
 }
 
