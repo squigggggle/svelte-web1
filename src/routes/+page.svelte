@@ -2,10 +2,12 @@
     import Panels from "$lib/panels.svelte";
 </script>
 
-<div>
-	<h1>Hello,</h1>
-	<h2>these are my cats</h2>
-	<p>On a website</p>
+<div class="heading">
+	<div class="text">
+		<h1>Hello,</h1>
+		<h2>these are my cats</h2>
+		<p>On a website</p>
+	</div>
 </div>
 <!-- css variable to change direction of panel flow -->
 <Panels --direction="row">
@@ -28,7 +30,7 @@
 </Panels>
 
 <style>
-	div {
+	.heading {
 		display: flex;
 		padding: 6rem;
 		flex-direction: column;
@@ -40,4 +42,12 @@
             padding: 4.5rem;
         }
     }
+
+	/* see if you can make the text line up with the first panel box text */
+
+	/* .text{
+		display: flex;
+		max-width: 600px;
+		flex-direction: inherit;
+	} */
 </style>
