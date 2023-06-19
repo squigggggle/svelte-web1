@@ -15,14 +15,20 @@
     }
     newY = newY; //assign to itself so svelte notices change
   }
+
+  let display = "none";
+  function fadeToBlack(){
+    display = "block";
+  }
 </script>
 
+<div style="display: {display}"></div>
 <svelte:window on:scroll={updateY} bind:scrollY={y} />
 {#if oldY > y || y < 67}
   <nav transition:fly>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/random">Random</a></li>
+      <li><a on:click={fadeToBlack} href="/">Home</a></li>
+      <li><a on:click={fadeToBlack} href="/random">Random</a></li>
     </ul>
   </nav>
 {/if}
@@ -40,5 +46,13 @@
     margin: 0;
     padding: 2rem 0;
     justify-content: space-evenly;
+  }
+
+  div {
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    background-color: black;
+    transition: all 0.5s;
   }
 </style>
