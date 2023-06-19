@@ -1,7 +1,7 @@
 <script>
-  import { SvelteComponent } from "svelte";
   import { fly, fade } from "svelte/transition";
 
+  //NAV BAR FADE IN AND OUT ON SCROLL
   // https://stackoverflow.com/questions/74776399/how-to-hide-a-div-element-when-scrolling-up-from-any-part-of-the-page-the-svelte
   let y;
   let newY = [];
@@ -17,6 +17,7 @@
     newY = newY; //assign to itself so svelte notices change
   }
 
+  //FADE IN AND OUT BETWEEN PAGES DIV
   //timeout so the transition can fade back in  
   function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
