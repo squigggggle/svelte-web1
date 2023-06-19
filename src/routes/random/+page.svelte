@@ -29,9 +29,11 @@
         flex-direction: column;
         align-items: center;
         flex: 1 1 auto;
+        justify-content: space-between;
     }
     img {
-        flex: 1 1 auto;
+        flex: 0 1 auto;
+        object-fit: contain;
     }
 
     button {
