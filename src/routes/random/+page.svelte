@@ -21,6 +21,8 @@
     <button on:click={rerunLoadFunction}>Update</button>
 </div>
 
+<!-- PLEASE FIX THE IMAGE WIDTH, MAKES PAGE NOT VERY RESPONSIVE WHEN PHONE SIZE -->
+
 <style>
     div {
         display: flex;

@@ -1,5 +1,5 @@
 <script>
-  import { fly } from "svelte/transition";
+  import { fly, fade } from "svelte/transition";
 
   // https://stackoverflow.com/questions/74776399/how-to-hide-a-div-element-when-scrolling-up-from-any-part-of-the-page-the-svelte
   let y;
@@ -16,13 +16,23 @@
     newY = newY; //assign to itself so svelte notices change
   }
 
-  let display = "none";
+  // trying to make it so it fades in and out but its not cooperating
+  let visible = false;
+  let hideScroll = "auto";
   function fadeToBlack(){
-    display = "block";
+    visible = true;
+    hideScroll = "hidden"
+  }
+  function unFadeToBlack(){
+    visible = false;
+    hideScroll = "auto";
   }
 </script>
 
-<div style="display: {display}"></div>
+{#if visible}
+<!-- doesn't un fade idk why -->
+<div transition:fade on:outroend={unFadeToBlack}></div>
+{/if}
 <svelte:window on:scroll={updateY} bind:scrollY={y} />
 {#if oldY > y || y < 67}
   <nav transition:fly>
@@ -34,6 +44,11 @@
 {/if}
 
 <style>
+  /* this doesn't even work yet */
+  :root {
+    overflow: var(--hideScroll);
+  }
+
   nav {
     position: fixed;
     top: 0;
