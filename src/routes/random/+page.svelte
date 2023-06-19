@@ -8,32 +8,42 @@
     }
 </script>
 
-<div>
+<div class = "container">
     {#if (data.status = 200)}
         <!--if fetch is successful (code 200) show the image-->
-        <img src="{data.BASE_URL}/{data.cat}" alt="Random cat" />
+        <div class = "wrapper">
+            <img src="{data.BASE_URL}/{data.cat}" alt="Random cat" />
+        </div>
     {:else}
         <!--otherwise show default image-->
-        <img src="loaf-square.jpg" alt="Default cat" />
-        <p>Error: {data.status}</p>
+        <div class = "wrapper"> 
+            <img src="loaf-square.jpg" alt="Default cat" />
+            <p>Error: {data.status}</p>
+        </div>
     {/if}
-
-    <button on:click={rerunLoadFunction}>Update</button>
+    <div class = "wrapper">    
+        <button on:click={rerunLoadFunction}>Update</button>
+    </div>
 </div>
 
-<!-- PLEASE FIX THE IMAGE WIDTH, MAKES PAGE NOT VERY RESPONSIVE WHEN PHONE SIZE -->
 
 <style>
-    div {
+    .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         flex: 1 1 auto;
-        justify-content: space-between;
     }
+
+    /* used to keep the button at the bottom of the container, and the image in centre of the leftover space */
+    .wrapper {
+        margin-top: auto;
+    }
+
     img {
-        flex: 0 1 auto;
         object-fit: contain;
+        max-width: 100%;
+        max-height: fit-content;
     }
 
     button {
