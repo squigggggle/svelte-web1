@@ -41,6 +41,7 @@
     }
 
     img {
+        padding: 0 2rem;
         object-fit: contain;
         max-width: 100%;
         max-height: fit-content;
