@@ -15,6 +15,7 @@ These design features were based off of websites I had found and put in [this de
 ## Bugs
 - Random cat image fetch sometimes fetches two images, shows the first one briefly and gets replaced by the second one
 - Black fade between loading pages doesn't appear over the page content or hide the scroll bar, so it is possible to see the current page after clicking a link
+  
 ![Black element covering screen fade bug](/static/fade-bug.png)
 ## Roadmap
 - Add a loading indicator on the random cat page to indicate something is happening when the button is pressed.
@@ -22,4 +23,5 @@ These design features were based off of websites I had found and put in [this de
 - Be able to click my cats for more information, in another page or a pop-up
 ## References
 "[How to hide a div element when scrolling up from any part of the page the svelte way?](https://stackoverflow.com/a/74777342)" answered by [IamFr0ssT](https://stackoverflow.com/users/7891382/iamfr0sst) is licenced under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+
 "[What is the JavaScript version of sleep()?](https://stackoverflow.com/a/39914235)" answered by [Dan Dascalescu](https://stackoverflow.com/users/1269037/dan-dascalescu) is licenced under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
