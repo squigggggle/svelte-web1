@@ -1,7 +1,7 @@
 <script>
     import Panels from "$lib/panels.svelte";
 </script>
-
+<!-- top heading to make a gap between the panels and the nav bar -->
 <div class="heading">
     <div class="text">
         <h1>Hello,</h1>
@@ -33,6 +33,7 @@
 </Panels>
 
 <style>
+    /* similar styling to the text part of the panels */
     .heading {
         display: flex;
         padding: 6rem;
@@ -42,6 +43,9 @@
     @media (max-width: 768px) {
         /* adjusted sizing for mobile-sized viewport */
         div {
+            padding: 4.5rem;
+        }
+        .heading {
             padding: 4.5rem;
         }
     }

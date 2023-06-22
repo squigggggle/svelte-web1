@@ -21,6 +21,7 @@
             <p>Error: {data.status}</p>
         </div>
     {/if}
+    <!-- reloads the fetch to grab another random cat image -->
     <div class = "wrapper">    
         <button on:click={rerunLoadFunction}>Update</button>
     </div>
@@ -28,6 +29,7 @@
 
 
 <style>
+    /* makes the container take up as much space on the page as it can to fill up the screen */
     .container {
         display: flex;
         flex-direction: column;
@@ -39,7 +41,7 @@
     .wrapper {
         margin-top: auto;
     }
-
+    /* makes the image fit inside the screen when in mobile view  */
     img {
         padding: 0 2rem;
         object-fit: contain;

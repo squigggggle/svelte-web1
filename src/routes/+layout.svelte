@@ -3,7 +3,7 @@
     import Navigation from "$lib/navigation.svelte";
     import Footer from "$lib/footer.svelte";
 </script>
-
+<!-- navigation outside so it gets covered by the fade animation -->
 <Navigation />
 
 <main>

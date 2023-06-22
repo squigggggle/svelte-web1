@@ -1,6 +1,7 @@
 <section>
     <div class="panel">
         <div class="text">
+            <!-- takes html from the page its inserted on and displays inside here -->
             <h2><slot name="header" /></h2>
             <p><slot name="paragraph" /></p>
         </div>
@@ -15,7 +16,7 @@
         flex-direction: var(--direction);
     }
     /* sets one panel to be half the width of the container
-  box sizing ensures padding is included in width calculation */
+    box sizing ensures padding is included in width calculation */
     .panel {
         display: flex;
         justify-content: center;
@@ -23,6 +24,7 @@
         padding: 6rem;
         align-items: center;
     }
+    /* aesthetically pleasing gap around the text inside the panel, make sure it doesn't look weird when in mobile view */
     .text {
         max-width: 600px;
         display: flex;
@@ -31,6 +33,7 @@
         width: 100%;
         font-size: 2rem;
     }
+    /* make the image half the width of the entire container */
     .img {
         flex: 1 1 50%;
         display: flex;
