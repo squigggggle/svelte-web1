@@ -19,6 +19,7 @@
 
   //FADE IN AND OUT BETWEEN PAGES DIV
   //timeout so the transition can fade back in  
+  // https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
   function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
   }
