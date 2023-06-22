@@ -8,6 +8,7 @@
 * SvelteKit
 ## Bugs
 - Random cat image fetch sometimes fetches two images, shows the first one briefly and gets replaced by the second one
+- Black fade between loading pages doesn't appear over the page content or hide the scroll bar, so it is possible to see the current page after clicking a link
 ## Roadmap
 - Add a loading indicator on the random cat page to indicate something is happening when the button is pressed
 
